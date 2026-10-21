@@ -1,0 +1,22 @@
+﻿family,range,quant,file,bytes,sha256,note
+binary,0-1,F16,gguf/random-binary-F16.gguf,1191552,ba1872029bd3cbef618233cd0704be11d9fd88089fc648f32717d3d938cf5cde,参考基准，未量化
+binary,0-1,Q8_0,gguf/random-binary-Q8_0.gguf,637216,bc83bb48eb8407a4d8e1819354a6373cae7580cc0349e99ee4aa4e51b9918311,8 位，几乎无损
+binary,0-1,Q4_K_M,gguf/random-binary-Q4_K_M.gguf,392416,99445c245fed234bedb7736b4e4984dfc0514ec85ea661c0aff9103118af112b,推荐：体积与精度平衡
+binary,0-1,Q4_K_S,gguf/random-binary-Q4_K_S.gguf,366816,1eec52d7c2fdf06e9c8bf3b04bd716842134c290dd0a6d595c28429a43ea83b5,更小一档
+binary,0-1,Q3_K_M,gguf/random-binary-Q3_K_M.gguf,323200,8611e36130b5614ee7532b5d7d1703997de95aff12b24853b9f056e852d56ae8,3 位，更小
+binary,0-1,Q2_K,gguf/random-binary-Q2_K.gguf,255520,1e64cdff5eb672faa38364e72141ff17b67cd8f31dfdc884b748a498af1cbfa1,2 位，最小
+digit,0-9,F16,gguf/random-digit-F16.gguf,1191552,301545fe9328c12988450dc726b7cd4eca09e980630bb866081f8fe0ec0ed838,参考基准，未量化
+digit,0-9,Q8_0,gguf/random-digit-Q8_0.gguf,637216,5904775c81694146fe34b8b3c19b72c4da36fe574121739366d6a8c6738e36e8,8 位，几乎无损
+digit,0-9,Q4_K_M,gguf/random-digit-Q4_K_M.gguf,392416,7801b6a75348feec957e641b4a44acf35783648156dec2db2595fec136db146d,推荐：体积与精度平衡
+digit,0-9,Q4_K_S,gguf/random-digit-Q4_K_S.gguf,366816,3fd692a35b25bd6e50dbd6eec97395b95f543546632f5b02c0c25ffa21fc8d93,更小一档
+digit,0-9,Q3_K_M,gguf/random-digit-Q3_K_M.gguf,323200,38b40d44b6b8766a7e45cd507993f5601d8cfdba07e058f46056b8036fef363f,3 位，更小
+digit,0-9,Q2_K,gguf/random-digit-Q2_K.gguf,255520,50fc09caf8080daef0ae992aef02b622e446201b81bd449e21c2aa22985e9bf3,2 位，最小
+num100,0-100,F16,gguf/random-num100-F16.gguf,1286016,59306589fa660e406da93497b7204f166b3ee25c1812cbb0de76c8373b5a0ba9,参考基准，未量化
+num100,0-100,Q8_0,gguf/random-num100-Q8_0.gguf,687968,40a88754148d3872b1832bc7f7ea4d78eee85852f8385ccc4de54c772e822f47,8 位，几乎无损
+num100,0-100,Q4_K_M,gguf/random-num100-Q4_K_M.gguf,425888,b48246d6f91055e652011868d5f468090fc299cca03d7718e99c8dacc1b3e279,推荐：体积与精度平衡
+num100,0-100,Q4_K_S,gguf/random-num100-Q4_K_S.gguf,400288,53d750b0eb99bd7bf0ae899438e598d96f3b0cc6a2492d4e4acaaa517248850c,更小一档
+num100,0-100,Q3_K_M,gguf/random-num100-Q3_K_M.gguf,353600,474d98e0a1baa9a7ec2858ac8e983279bc29302a613cff1ebcc8776a603ac530,3 位，更小
+num100,0-100,Q2_K,gguf/random-num100-Q2_K.gguf,283552,64f3770b197c1677c49f479e6d9b3d7a3832527298343878b224aa0350ea6684,2 位，最小
+binary,0-1,Q2_K(onefile),random-binary.gguf,255520,1e64cdff5eb672faa38364e72141ff17b67cd8f31dfdc884b748a498af1cbfa1,一键版：等于 Q2_K，直接拖进前端即可
+digit,0-9,Q2_K(onefile),random-digit.gguf,255520,50fc09caf8080daef0ae992aef02b622e446201b81bd449e21c2aa22985e9bf3,一键版：等于 Q2_K，直接拖进前端即可
+num100,0-100,Q2_K(onefile),random-num100.gguf,283552,64f3770b197c1677c49f479e6d9b3d7a3832527298343878b224aa0350ea6684,一键版：等于 Q2_K，直接拖进前端即可
