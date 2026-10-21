@@ -1,0 +1,16 @@
+# 随机数模型 · 0~100（num100）
+# 用法（在仓库根目录）：
+#   ollama create random-num100 -f Modelfiles/Modelfile.num100
+#   ollama run  random-num100 "随便说点什么"
+# 想换量化档位：把下面 FROM 那行的文件名改成 ../gguf/ 里任意一个即可。
+FROM ../gguf/random-num100-Q4_K_M.gguf
+
+# 关键：top_k 至少 101（取值个数）、top_p 必须为 1.0。
+# 用默认的 top_k=40 / top_p=0.9 时，只有约 36 个取值可能被抽到。
+PARAMETER temperature      1.0
+PARAMETER top_k            101
+PARAMETER top_p            1.0
+PARAMETER min_p            0.0
+PARAMETER repeat_penalty   1.0
+PARAMETER presence_penalty 0.0
+PARAMETER frequency_penalty 0.0
