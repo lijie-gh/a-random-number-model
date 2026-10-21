@@ -1,0 +1,16 @@
+# 随机数模型 · 0~9（digit）
+# 用法（在仓库根目录）：
+#   ollama create random-digit -f Modelfiles/Modelfile.digit
+#   ollama run  random-digit "随便说点什么"
+# 想换量化档位：把下面 FROM 那行的文件名改成 ../gguf/ 里任意一个即可。
+FROM ../gguf/random-digit-Q4_K_M.gguf
+
+# 关键：top_k 必须 ≥ 取值个数、top_p 必须为 1.0。
+# 否则采样器会砍掉尾部概率，某些数字永远抽不到（见 README 实测）。
+PARAMETER temperature      1.0
+PARAMETER top_k            10
+PARAMETER top_p            1.0
+PARAMETER min_p            0.0
+PARAMETER repeat_penalty   1.0
+PARAMETER presence_penalty 0.0
+PARAMETER frequency_penalty 0.0
